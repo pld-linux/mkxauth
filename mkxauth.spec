@@ -14,9 +14,13 @@ Group:		X11/Applications
 Source0:	%{name}
 Source1:	%{name}.1x
 BuildArch:	noarch
-Requires:	/usr/X11R6/bin/xauth textutils fileutils sh-utils procps gzip
+Requires:	/usr/X11R6/bin/xauth
+Requires:	fileutils
+Requires:	gzip
+Requires:	procps
+Requires:	sh-utils
+Requires:	textutils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 The mkxauth utility helps create and maintain X authentication
