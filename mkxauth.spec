@@ -96,6 +96,8 @@ mkxauth, X yetki veritabanlarýnýn (.Xauthority dosyalarý)
 oluþturulmasý ve bakýmýnda yardýmcý olur. Güvenlik açýsýndan mkxauth,
 yetki anahtarlarý içeren geçici dosyalar oluþturmaz.
 
+%prep
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_prefix}/{bin,man/man1}
