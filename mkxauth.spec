@@ -9,7 +9,7 @@ Source1: mkxauth.1x
 BuildArchitectures: noarch
 Requires: /usr/X11R6/bin/xauth textutils fileutils sh-utils procps gzip
 Prefix: /usr/X11R6
-BuildRoot: /var/tmp/mkxauth-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The mkxauth utility helps create and maintain X authentication
