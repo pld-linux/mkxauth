@@ -11,8 +11,6 @@ Version:	1.7
 Release:	17
 License:	GPL
 Group:		X11/Applications
-Group(de):	X11/Applikationen
-Group(pl):	X11/Aplikacje
 Source0:	%{name}
 Source1:	%{name}.1x
 BuildArch:	noarch
