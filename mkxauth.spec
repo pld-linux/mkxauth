@@ -39,7 +39,7 @@ System (a good idea).
 kxauth' hilft beim Erstellen und Verwalten von X-Authentifizierungs-
 Datenbanken (.Xauthority-Dateien). Sie können eine ~/.Xauthority-Datei
 erstellen oder Schlüssel aus einer anderen lokalen oder entfernten
-.Xauthority- Datei einfügen. .Xauthority-Dateien können über ftp (mit
+.Xauthority- Datei einfügen. .Xauthority-Dateien können über FTP (mit
 ncftp) oder rsh wiederhergestellt werden. Aus Sicherheitsgründen
 erstellt mkxauth keine Temporärdateien, die
 Authentifizierungsschlüssel enthalten.
@@ -49,7 +49,7 @@ Authentifizierungsschlüssel enthalten.
 autentificación X (archivos .Xauthority). Úsalo para crear un archivo
 ~/.Xauthority o para unir una llave de otro local o archivo
 .Xauthority remoto. Se pueden recuperar archivos remotos .Xauthority
-vía ftp (usando ncftp) o vía rsh. Por seguridad, mkxauth no crea
+vía FTP (usando ncftp) o vía rsh. Por seguridad, mkxauth no crea
 cualquier de los archivos temporales conteniendo llaves de
 autentificación.
 
@@ -58,7 +58,7 @@ mkxauth aide à la création et la maintenance des bases de données
 d'authentification X (fichiers .Xauthority). Utilisez le pour créer un
 fichier ~/.Xauthority ou pour fusionner des clés à partir d'un autre
 fichier .Xauthority, local ou distant. Les fichiers .Xauthority
-distants peuvent être obtenus via ftp (avec ncftp) ou via rsh. Pour
+distants peuvent être obtenus via FTP (avec ncftp) ou via rsh. Pour
 des raisons de sécurité, mkxauth ne crée pas de fichiers temporaires
 contenant les clés d'authentification.
 
@@ -88,7 +88,7 @@ serwerów na podstawie zawarto¶ci pliku .Xauthrity.
 autenticação X (arquivos .Xauthority). Use-o para criar um arquivo
 ~/.Xauthority ou para unir uma chaves de outro local ou arquivo
 .Xauthority remoto. Arquivos remotos .Xauthority podem ser recuperados
-via ftp (usando ncftp) ou via rsh. Por segurança, mkxauth não cria
+via FTP (usando ncftp) ou via rsh. Por segurança, mkxauth não cria
 quaisquer arquivos temporários contendo chaves de autenticação.
 
 %description -l tr
