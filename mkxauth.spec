@@ -41,4 +41,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 /usr/X11R6/bin/mkxauth
-/usr/X11R6/man/man1/mkxauth.1x
+/usr/X11R6/man/man1/mkxauth*
