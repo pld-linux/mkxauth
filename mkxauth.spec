@@ -17,8 +17,6 @@ BuildArch:	noarch
 Requires:	/usr/X11R6/bin/xauth textutils fileutils sh-utils procps gzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 The mkxauth utility helps create and maintain X authentication
