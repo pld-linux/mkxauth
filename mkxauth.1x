@@ -1,0 +1,254 @@
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+.TH mkxauth 1x "12-Dec-1996" "Red Hat Software" "Linux User's Manual"
+.SH NAME
+mkxauth \- create and merge .Xauthority files
+.SH SYNOPSIS
+(1)
+.B mkxauth
+[ \-q ] [ \-u
+.I login
+] \-c [
+.I host
+[
+.I host
+\|.\|.\|. ] ]
+.PP
+(2)
+.B mkxauth
+[ \-q ] [ \-u
+.I login
+] \-m
+.I login
+.PP
+(3)
+.B mkxauth
+[ \-q ] [ \-u
+.I login
+] \-f
+.I host
+.PP
+(4)
+.B mkxauth
+[ \-q ] [ \-u
+.I login
+] \-r
+.I host
+[ \-l
+.I login
+]
+.PP
+(5)
+.B mkxauth
+[ \-q ] [ \-u
+.I login
+] \-z
+.I host
+[ \-l
+.I login
+]
+.SH DESCRIPTION
+.B mkxauth 
+aids in the creation and maintenance of X authentication databases
+(.Xauthority files).  Use it to create a ~/.Xauthority file or merge
+keys from another local or remote .Xauthority file.  Remote .Xauthority
+files can be retrieved via FTP (using 
+.BR ncftp (1)) 
+or via 
+.BR rsh (1).
+For a slight measure of security,
+.B mkxauth 
+does not create any temporary files containing authentication keys
+(although anyone spying on network packets can see the authentication
+key data as they pass through the network; for secure network
+communications, use 
+.BR ssh (1)).
+.SS Creating and Adding to a .Xauthority File
+To create a .Xauthority file, use
+.B mkxauth \-c 
+(see (1) above).
+.B mkxauth 
+creates a .Xauthority file in the user's home directory (~/),
+containing a `key' or `magic cookie' for the host it was run on (the
+one returned by
+.BR hostname (1)).  
+If a .Xauthority file already exists, the keys are added to it.  If
+keys for that host already exist, they are replaced.
+.PP
+To create or add to a .Xauthority file for another user, use
+.B mkxauth \-u
+.I login
+.BR \-c .
+.B mkxauth
+adds keys to
+.RI ~ login /.Xauthority
+(only the root user is allowed to do this).
+.PP
+To add a key for more than one host, specify all hosts on the command
+line:
+.B mkxauth \-c daffy porky 
+.BR bugs .
+All hosts specified on the same command line receive the same key.  To
+create different keys for multiple hosts, run
+.B mkxauth
+for each host in succession:
+.PP
+.RS
+.TQ
+mkxauth \-c daffy
+.TQ
+mkxauth \-c porky
+.TQ
+mkxauth \-c bugs
+.RE
+.SS Merging Keys from Local .Xauthority Files
+To merge keys from another local user's .Xauthority file, use
+.B mkxauth \-m
+.I login 
+(see (2) above).
+.B mkxauth
+adds the keys in 
+.RI ~ login /.Xauthority
+to ~/.Xauthority, replacing any keys which already exist.
+.RI ~ login /.Xauthority
+must be readable by the user running
+.B mkxauth
+(normally only the root user can read other people's .Xauthority files).
+.SS Merging Keys via FTP
+To merge keys from a remote .Xauthority file via FTP, use
+.B mkxauth \-f
+.I host
+(see (3) above).
+.B mkxauth 
+retrieves the remote .Xauthority from
+.I host
+using
+.BR ncftp (1)
+and adds those keys to ~/.Xauthority, replacing any keys which already
+exist.
+.RI [ NOTE :
+you must have a ~/.netrc file set up to automatically log you into
+.IR host ,
+otherwise the FTP login attempt will fail.]
+.SS Merging Keys via rsh(1)
+To merge keys from remote .Xauthority file via
+.BR rsh (1),
+use
+.B mkxauth \-r
+.I host
+(see (4) above).
+.B mkxauth
+retrieves the remote .Xauthority from
+.I host
+using
+.BR rsh (1)
+and adds those keys to ~/.Xauthority, replacing any keys which already
+exist.  To login as a different user, use
+.B \-l
+.IR login .
+.RI [ NOTE :
+you must have a .rhosts file set up properly for this to work,
+otherwise the remote login attempt will fail].
+.SS Merging Keys via rsh(1) and gzip(1)
+If your remote .Xauthority file is large, or to make it slightly less
+obvious that you're transferring authentication keys over the network,
+.B mkxauth
+can
+.BR gzip (1)
+your .Xauthority file before retrieving it via 
+.BR rsh (1).
+To do this, use
+.B mkxauth \-z
+.I host
+(see (5) above).
+.B mkxauth
+retrieves the remote .Xauthority from
+.I host
+using
+.BR rsh (1)
+and adds those keys to ~/.Xauthority, replacing any keys which already
+exist.  To login as a different user, use
+.B \-l
+.IR login .
+.RI [ NOTE :
+you must have a .rhosts file set up properly for this to work,
+otherwise the remote login attempt will fail].
+.SS Options
+To make 
+.B mkxauth
+operate quietly, use the
+.B \-q
+option.
+.PP
+To add to 
+.RI ~ login /.Xauthority,
+use the
+.B \-u
+.I login
+option.
+.PP
+To use 
+.I login
+for the remote login in 
+.B mkxauth 
+.BR \-f ,
+.B mkxauth
+.BR \-r ,
+and
+.B mkxauth
+.BR \-z ,
+use the
+.B \-l
+.I login 
+option.
+.SS Getting Help
+To get quick help about
+.BR mkxauth ,
+use 
+.B mkxauth 
+.BR \-\-help .
+.SH FILES
+.TQ
+~/.Xauthority
+.TQ
+~/.netrc
+.TQ
+~/.rhosts
+.SH COMMENTS
+.B mkxauth
+is mostly useful for maintaining .Xauthority files in an environment
+which uses
+.BR startx (1x).
+.BR xdm (1x)
+uses its own method of generating .Xauthority files.  However, 
+.B mkxauth
+is still useful for transferring .Xauthority information to remote
+login sessions so that the user can display remote X clients on the
+local host without too much trouble.
+.PP
+Note, however, that using 
+.BR rsh (1)
+is inherently insecure, and sites concerned about security should use
+.BR ssh (1)
+instead (see http://www.cs.hut.fi/ssh/ for more information).
+.SH SEE ALSO
+.BR X (1x),
+.BR Xsecurity (1x),
+.BR gzip (1),
+.BR mcookie (1),
+.BR md5sum (1),
+.BR ncftp (1),
+.BR rsh (1),
+.BR startx (1x),
+.BR xauth (1x),
+.BR xdm (1x)
+.SH BUGS
+Does not respect the XAUTHORITY environment variable.
+.SH AUTHOR
+Conceived and written by Jim Knoble <jmknoble@redhat.com>.  Copyright
+1996 by Jim Knoble and Red Hat Software.  Distributed under the GNU GPL
+(General Public License); see ftp://prep.ai.mit.edu/pub/gnu/COPYING for
+more information.
