@@ -1,11 +1,11 @@
 Summary:	A utility for managing .Xauthority files
-Summary(de):	Red Hat X-Autoritäts-Utility
-Summary(es):	Utilitario de Autorización X
-Summary(fr):	Utilitaire Red Hat pour les permissions X
-Summary(ja):	.Xauthority ¥Õ¥¡¥¤¥ë¤ò´ÉÍı¤¹¤ë¤¿¤á¤Î¥æ¡¼¥Æ¥£¥ê¥Æ¥£¡£
-Summary(pl):	Narzêdzie do zarz±dzania plikami .Xauthority
-Summary(pt_BR):	Utilitário de Autorização X
-Summary(tr):	Red Hat X yetki aracı
+Summary(de.UTF-8):   Red Hat X-AutoritÃ¤ts-Utility
+Summary(es.UTF-8):   Utilitario de AutorizaciÃ³n X
+Summary(fr.UTF-8):   Utilitaire Red Hat pour les permissions X
+Summary(ja.UTF-8):   .Xauthority ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç®¡ç†ã™ã‚‹ãŸã‚ã®ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£ã€‚
+Summary(pl.UTF-8):   NarzÄ™dzie do zarzÄ…dzania plikami .Xauthority
+Summary(pt_BR.UTF-8):   UtilitÃ¡rio de AutorizaÃ§Ã£o X
+Summary(tr.UTF-8):   Red Hat X yetki aracÄ±
 Name:		mkxauth
 Version:	1.7
 Release:	17
@@ -34,67 +34,67 @@ The mkxauth package should be installed if you're going to use
 user-oriented access control to provide security for your X Window
 System (a good idea).
 
-%description -l de
+%description -l de.UTF-8
 
 kxauth' hilft beim Erstellen und Verwalten von X-Authentifizierungs-
-Datenbanken (.Xauthority-Dateien). Sie können eine ~/.Xauthority-Datei
-erstellen oder Schlüssel aus einer anderen lokalen oder entfernten
-.Xauthority- Datei einfügen. .Xauthority-Dateien können über FTP (mit
-ncftp) oder rsh wiederhergestellt werden. Aus Sicherheitsgründen
-erstellt mkxauth keine Temporärdateien, die
-Authentifizierungsschlüssel enthalten.
+Datenbanken (.Xauthority-Dateien). Sie kÃ¶nnen eine ~/.Xauthority-Datei
+erstellen oder SchlÃ¼ssel aus einer anderen lokalen oder entfernten
+.Xauthority- Datei einfÃ¼gen. .Xauthority-Dateien kÃ¶nnen Ã¼ber FTP (mit
+ncftp) oder rsh wiederhergestellt werden. Aus SicherheitsgrÃ¼nden
+erstellt mkxauth keine TemporÃ¤rdateien, die
+AuthentifizierungsschlÃ¼ssel enthalten.
 
-%description -l es
-'mkxauth' ayuda en la creación y manutención de bancos de datos de
-autentificación X (archivos .Xauthority). Úsalo para crear un archivo
+%description -l es.UTF-8
+'mkxauth' ayuda en la creaciÃ³n y manutenciÃ³n de bancos de datos de
+autentificaciÃ³n X (archivos .Xauthority). Ãšsalo para crear un archivo
 ~/.Xauthority o para unir una llave de otro local o archivo
 .Xauthority remoto. Se pueden recuperar archivos remotos .Xauthority
-vía FTP (usando ncftp) o vía rsh. Por seguridad, mkxauth no crea
+vÃ­a FTP (usando ncftp) o vÃ­a rsh. Por seguridad, mkxauth no crea
 cualquier de los archivos temporales conteniendo llaves de
-autentificación.
+autentificaciÃ³n.
 
-%description -l fr
-mkxauth aide à la création et la maintenance des bases de données
-d'authentification X (fichiers .Xauthority). Utilisez le pour créer un
-fichier ~/.Xauthority ou pour fusionner des clés à partir d'un autre
+%description -l fr.UTF-8
+mkxauth aide Ã  la crÃ©ation et la maintenance des bases de donnÃ©es
+d'authentification X (fichiers .Xauthority). Utilisez le pour crÃ©er un
+fichier ~/.Xauthority ou pour fusionner des clÃ©s Ã  partir d'un autre
 fichier .Xauthority, local ou distant. Les fichiers .Xauthority
-distants peuvent être obtenus via FTP (avec ncftp) ou via rsh. Pour
-des raisons de sécurité, mkxauth ne crée pas de fichiers temporaires
-contenant les clés d'authentification.
+distants peuvent Ãªtre obtenus via FTP (avec ncftp) ou via rsh. Pour
+des raisons de sÃ©curitÃ©, mkxauth ne crÃ©e pas de fichiers temporaires
+contenant les clÃ©s d'authentification.
 
-%description -l ja
-mkxauth ¥æ¡¼¥Æ¥£¥ê¥Æ¥£¤Ï X Ç§¾Ú¥Ç¡¼¥¿¥Ù¡¼¥¹ ( .Xauthority ¥Õ¥¡¥¤¥ë )
-¤Î À¸À®¤ÈÀ°È÷¤ò½õ¤±¤Ş¤¹¡£mkxauth ¤Ï .Xauthority ¥Õ¥¡¥¤¥ë¤ÎÀ¸À®¡¢
-¥í¡¼¥«¥ë¤Ş¤¿¤Ï¥ê¥â¡¼¥È¤Î .Xauthority
-¥Õ¥¡¥¤¥ë¤Î¸°¤ÎÅı¹ç¤ËÍÑ¤¤¤é¤ì¤Ş¤¹¡£ .Xauthority
-¥Õ¥¡¥¤¥ë¤Ï¡¢¤½¤ÎÆâÍÆ¤Ë´ğ¤Å¤¤¤Æ X ¥µ¡¼¥Ğ¤Ø¤Î¥¢¥¯¥»¥¹¤Î
-¾µÂú¡¢µñÈİ¤ò¤¹¤ë¡¢¥æ¡¼¥¶»Ø¸ş¤Î¥¢¥¯¥»¥¹¥³¥ó¥È¥í¡¼¥ë¥×¥í¥°¥é¥à¤Ç¤¢¤ë
-xauth ¤ËÍÑ¤¤¤é¤ì¤Ş¤¹¡£
+%description -l ja.UTF-8
+mkxauth ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£ã¯ X èªè¨¼ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ ( .Xauthority ãƒ•ã‚¡ã‚¤ãƒ« )
+ã® ç”Ÿæˆã¨æ•´å‚™ã‚’åŠ©ã‘ã¾ã™ã€‚mkxauth ã¯ .Xauthority ãƒ•ã‚¡ã‚¤ãƒ«ã®ç”Ÿæˆã€
+ãƒ­ãƒ¼ã‚«ãƒ«ã¾ãŸã¯ãƒªãƒ¢ãƒ¼ãƒˆã® .Xauthority
+ãƒ•ã‚¡ã‚¤ãƒ«ã®éµã®çµ±åˆã«ç”¨ã„ã‚‰ã‚Œã¾ã™ã€‚ .Xauthority
+ãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€ãã®å†…å®¹ã«åŸºã¥ã„ã¦ X ã‚µãƒ¼ãƒã¸ã®ã‚¢ã‚¯ã‚»ã‚¹ã®
+æ‰¿è«¾ã€æ‹’å¦ã‚’ã™ã‚‹ã€ãƒ¦ãƒ¼ã‚¶æŒ‡å‘ã®ã‚¢ã‚¯ã‚»ã‚¹ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã§ã‚ã‚‹
+xauth ã«ç”¨ã„ã‚‰ã‚Œã¾ã™ã€‚
 
-X ¥¦¥£¥ó¥É¥¦¥·¥¹¥Æ¥à¤Ë¥»¥­¥å¥ê¥Æ¥£¤òÄó¶¡¤¹¤ë¤¿¤á¤Ë¥æ¡¼¥¶»Ø¸ş¤Î
-¥¢¥¯¥»¥¹¥³¥ó¥È¥í¡¼¥ë¤òÍÑ¤¤¤è¤¦¤È¤¹¤ë¤Î¤Ê¤é¡¢mkxauth ¥Ñ¥Ã¥±¡¼¥¸¤Ï
-¥¤¥ó¥¹¥È¡¼¥ë¤µ¤ì¤ë¤Ù¤­¤Ç¤¹ (¤½¤·¤Æ¤½¤ì¤Ï¤è¤¤¹Í¤¨¤Ç¤¹)¡£
+X ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚·ã‚¹ãƒ†ãƒ ã«ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ã‚’æä¾›ã™ã‚‹ãŸã‚ã«ãƒ¦ãƒ¼ã‚¶æŒ‡å‘ã®
+ã‚¢ã‚¯ã‚»ã‚¹ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã‚’ç”¨ã„ã‚ˆã†ã¨ã™ã‚‹ã®ãªã‚‰ã€mkxauth ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã¯
+ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã‚‹ã¹ãã§ã™ (ãã—ã¦ãã‚Œã¯ã‚ˆã„è€ƒãˆã§ã™)ã€‚
 
-%description -l pl
-Narzêdzie mkxauth pomaga tworzyæ i zarz±dzaæ bazami danych
-autentykacji X (plikami .Xauthority). mkxauth jest u¿ywany do
-tworzenia pliku .Xauthority oraz do³±czania kluczy z innego lokalnego
-lub zdalnego pliku .Xauthority. Pliki .Xauthority s± u¿ywane przez
-program kontroli dostêpu xauth, pozwalaj±cy lub nie na dostêp do X
-serwerów na podstawie zawarto¶ci pliku .Xauthrity.
+%description -l pl.UTF-8
+NarzÄ™dzie mkxauth pomaga tworzyÄ‡ i zarzÄ…dzaÄ‡ bazami danych
+autentykacji X (plikami .Xauthority). mkxauth jest uÅ¼ywany do
+tworzenia pliku .Xauthority oraz doÅ‚Ä…czania kluczy z innego lokalnego
+lub zdalnego pliku .Xauthority. Pliki .Xauthority sÄ… uÅ¼ywane przez
+program kontroli dostÄ™pu xauth, pozwalajÄ…cy lub nie na dostÄ™p do X
+serwerÃ³w na podstawie zawartoÅ›ci pliku .Xauthrity.
 
-%description -l pt_BR
-'mkxauth' ajuda na criação e manutenção de bancos de dados de
-autenticação X (arquivos .Xauthority). Use-o para criar um arquivo
+%description -l pt_BR.UTF-8
+'mkxauth' ajuda na criaÃ§Ã£o e manutenÃ§Ã£o de bancos de dados de
+autenticaÃ§Ã£o X (arquivos .Xauthority). Use-o para criar um arquivo
 ~/.Xauthority ou para unir uma chaves de outro local ou arquivo
 .Xauthority remoto. Arquivos remotos .Xauthority podem ser recuperados
-via FTP (usando ncftp) ou via rsh. Por segurança, mkxauth não cria
-quaisquer arquivos temporários contendo chaves de autenticação.
+via FTP (usando ncftp) ou via rsh. Por seguranÃ§a, mkxauth nÃ£o cria
+quaisquer arquivos temporÃ¡rios contendo chaves de autenticaÃ§Ã£o.
 
-%description -l tr
-mkxauth, X yetki veritabanlarının (.Xauthority dosyaları)
-oluşturulması ve bakımında yardımcı olur. Güvenlik açısından mkxauth,
-yetki anahtarları içeren geçici dosyalar oluşturmaz.
+%description -l tr.UTF-8
+mkxauth, X yetki veritabanlarÄ±nÄ±n (.Xauthority dosyalarÄ±)
+oluÅŸturulmasÄ± ve bakÄ±mÄ±nda yardÄ±mcÄ± olur. GÃ¼venlik aÃ§Ä±sÄ±ndan mkxauth,
+yetki anahtarlarÄ± iÃ§eren geÃ§ici dosyalar oluÅŸturmaz.
 
 %prep
 
