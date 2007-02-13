@@ -1,11 +1,11 @@
 Summary:	A utility for managing .Xauthority files
-Summary(de.UTF-8):   Red Hat X-Autoritäts-Utility
-Summary(es.UTF-8):   Utilitario de Autorización X
-Summary(fr.UTF-8):   Utilitaire Red Hat pour les permissions X
-Summary(ja.UTF-8):   .Xauthority ファイルを管理するためのユーティリティ。
-Summary(pl.UTF-8):   Narzędzie do zarządzania plikami .Xauthority
-Summary(pt_BR.UTF-8):   Utilitário de Autorização X
-Summary(tr.UTF-8):   Red Hat X yetki aracı
+Summary(de.UTF-8):	Red Hat X-Autoritäts-Utility
+Summary(es.UTF-8):	Utilitario de Autorización X
+Summary(fr.UTF-8):	Utilitaire Red Hat pour les permissions X
+Summary(ja.UTF-8):	.Xauthority ファイルを管理するためのユーティリティ。
+Summary(pl.UTF-8):	Narzędzie do zarządzania plikami .Xauthority
+Summary(pt_BR.UTF-8):	Utilitário de Autorização X
+Summary(tr.UTF-8):	Red Hat X yetki aracı
 Name:		mkxauth
 Version:	1.7
 Release:	17
