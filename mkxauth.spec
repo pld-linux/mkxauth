@@ -8,13 +8,13 @@ Summary(pt_BR.UTF-8):	Utilitário de Autorização X
 Summary(tr.UTF-8):	Red Hat X yetki aracı
 Name:		mkxauth
 Version:	1.7
-Release:	17
+Release:	18
 License:	GPL
 Group:		X11/Applications
 Source0:	%{name}
 Source1:	%{name}.1x
 BuildArch:	noarch
-Requires:	/usr/X11R6/bin/xauth
+Requires:	/usr/bin/xauth
 Requires:	fileutils
 Requires:	gzip
 Requires:	procps
@@ -100,7 +100,7 @@ yetki anahtarları içeren geçici dosyalar oluşturmaz.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/{bin,man/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install %{SOURCE0} $RPM_BUILD_ROOT%{_bindir}/mkxauth
 install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1/mkxauth.1x
