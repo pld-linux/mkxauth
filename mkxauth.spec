@@ -13,13 +13,13 @@ License:	GPL
 Group:		X11/Applications
 Source0:	%{name}
 Source1:	%{name}.1x
-BuildArch:	noarch
 Requires:	/usr/bin/xauth
 Requires:	fileutils
 Requires:	gzip
 Requires:	procps
 Requires:	sh-utils
 Requires:	textutils
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,8 +35,7 @@ user-oriented access control to provide security for your X Window
 System (a good idea).
 
 %description -l de.UTF-8
-
-kxauth' hilft beim Erstellen und Verwalten von X-Authentifizierungs-
+'mkxauth' hilft beim Erstellen und Verwalten von X-Authentifizierungs-
 Datenbanken (.Xauthority-Dateien). Sie können eine ~/.Xauthority-Datei
 erstellen oder Schlüssel aus einer anderen lokalen oder entfernten
 .Xauthority- Datei einfügen. .Xauthority-Dateien können über FTP (mit
